@@ -21,27 +21,38 @@ themeBtn.forEach((e) => {
 let numBtn = document.querySelectorAll(".keypad #num");
 let operBtn = document.querySelector(".keypad #equal");
 let screen = document.querySelector(".screen");
+let deleteBtn = document.querySelector("#del");
+let resetBtn = document.querySelector("#reset");
 
 numBtn.forEach((element) => {
     numberValue(element);
 });
-// operBtn.forEach((oper) => {
-//     numberValue(oper);
-// });
 
 function numberValue(element) {
     element.addEventListener("click", (ele) => {
-        equal.addEventListener("click", () => {
-            if (screen.innerHTML <= 0) {
-                console.log("the screen is empty");
-            } else {
-                screen.innerHTML = eval(screen.innerHTML);
-                console.log(screen.innerHTML);
-            }
-        });
-        console.log(ele.target.innerHTML);
-        const val = ele.target.innerHTML;
-        screen.innerHTML += val;
+        let element = ele.target.innerHTML;
+        if (element === "x") {
+            element = "*";
+        } else {
+            element = ele.target.innerHTML;
+        }
+        screen.innerHTML += element;
+        let x = screen.innerHTML;
+        screenValue(x);
     });
-    screen.innerHTML = "";
 }
+
+function screenValue(x) {
+    equal.onclick = () => {
+        let result = eval(x);
+        screen.innerHTML = result;
+    };
+}
+deleteBtn.addEventListener("click", () => {
+    let dele = screen.innerHTML.slice(0, screen.innerHTML.length - 1);
+    screen.innerHTML = dele;
+});
+
+resetBtn.addEventListener("click", () => {
+    screen.innerHTML = "";
+});
