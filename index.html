@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="sass/style.css" />
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>calc</h1>
+            <div class="right">
+                <p>THEME</p>
+                <div class="toggle">
+                    <div class="Theme one active" id="1"></div>
+                    <div class="Theme two" id="2"></div>
+                    <div class="Theme three" id="3"></div>
+                </div>
+            </div>
+        </header>
+        <div class="screen"></div>
+        <div class="keypad">
+            <span id="num">7</span>
+            <span id="num">8</span>
+            <span id="num">9</span>
+            <span id="del">DEL</span>
+            <span id="num">4</span>
+            <span id="num">5</span>
+            <span id="num">6</span>
+            <span id="num">+</span>
+            <span id="num">1</span>
+            <span id="num">2</span>
+            <span id="num">3</span>
+            <span id="num">-</span>
+            <span id="num">.</span>
+            <span id="num">0</span>
+            <span id="num">/</span>
+            <span id="num">x</span>
+            <span id="reset">RESET</span>
+            <span id="equal">=</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
+      >. Coded by <a href="https://mrcode93.netlify.app/">Amer Farhan Ahmed</a>.
+    </div>
+</body>
+
+</html>
